@@ -15,18 +15,15 @@ const Heading = styled(Typography)`
 `;
 
 const App = () => {
-  const _products = sessionStorage.getItem('__TK_PRODUCTS__');
-  if (!_products) {
-    sessionStorage.setItem('__TK_PRODUCTS__', JSON.stringify(PRODUCTS));
-  }
+  sessionStorage.setItem('__TK_PRODUCTS__', JSON.stringify(PRODUCTS));
 
   return (
-    <div className='App'>
+    <Box className='App' p={2}>
       <Box px={2} py={2} bgcolor='#eff6ff' mx='auto'>
         <Heading variant='h4'>Products</Heading>
       </Box>
       <Dashboard />
-    </div>
+    </Box>
   );
 };
 
@@ -57,5 +54,20 @@ const PRODUCTS: Product[] = [
     id: '1702132651765',
     name: 'Lenovo FHD IPS',
     type: 'monitor',
+  },
+  {
+    id: '1702132651455',
+    name: 'Google Home',
+    type: 'smart speaker',
+  },
+  {
+    id: '1702132651345',
+    name: 'Atomberg BLDC fan',
+    type: 'fan',
+  },
+  {
+    id: '1702132634765',
+    name: 'Samsung Eco bubble',
+    type: 'washing machine',
   },
 ];
