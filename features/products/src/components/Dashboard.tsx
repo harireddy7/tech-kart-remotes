@@ -42,6 +42,7 @@ const Dashboard = () => {
                     size='small'
                     onClick={() => handleAddProduct(product)}
                     variant='contained'
+                    sx={{ width: '100%' }}
                   >
                     {cart.find((p: Product) => p.id === product.id) ? 'Remove' : 'Add to cart'}
                   </Button>

@@ -23,7 +23,7 @@ const App = () => {
   return (
     <div className='App'>
       <Box px={2} py={2} bgcolor='#eff6ff' mx='auto'>
-        <Heading variant='h4'>Products</Heading>
+        <Heading variant='h4'>Product Listing</Heading>
       </Box>
       <Dashboard />
     </div>
