@@ -28,8 +28,7 @@ const Dashboard = () => {
   return (
     <Box p={2}>
       <Box p={2} mx='auto'>
-        <header className='flex justify-end my-4'>
-        </header>
+        <header className='flex justify-end my-4'></header>
         <Grid container spacing={2}>
           {products.map((product: Product) => (
             <Grid item key={product.id}>
@@ -39,7 +38,11 @@ const Dashboard = () => {
                   <Typography variant='body2'>{product.type}</Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size='small' onClick={() => handleAddProduct(product)} variant='contained'>
+                  <Button
+                    size='small'
+                    onClick={() => handleAddProduct(product)}
+                    variant='contained'
+                  >
                     {cart.find((p: Product) => p.id === product.id) ? 'Remove' : 'Add to cart'}
                   </Button>
                 </CardActions>

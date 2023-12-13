@@ -1,0 +1,46 @@
+# test, build, generate release notes, changelog
+# bump version in package.json
+# release to GitHub
+# when a push happens to the main branch
+
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: 'read'
+      actions: 'read'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup Node v18.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18.x
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Get Base and Head SHA's for `nx affected`
+        uses: nrwl/nx-set-shas@v4
+
+      - name: Run unit tests
+        run: yarn test --base=$NX_BASE --head=$NX_HEAD
+
+      - name: Build
+        run: yarn build --base=$NX_BASE --head=$NX_HEAD
+
+      - name: Release
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          HUSKY: 0
+        run: npx nx run-many -t semantic-release --parallel=false --base=$NX_BASE --head=$NX_HEAD

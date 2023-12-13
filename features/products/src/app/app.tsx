@@ -6,7 +6,7 @@ type Product = {
   id: string;
   name: string;
   type: string;
-}
+};
 
 const Heading = styled(Typography)`
   font-weight: bold;
