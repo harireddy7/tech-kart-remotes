@@ -7,6 +7,10 @@ const baseConfig = {
   exposes: {
     './Products': './src/remote-entry.ts',
   },
+  library: {
+    name: 'products',
+    type: 'var',
+  },
 };
 
 // Nx plugins for webpack.
