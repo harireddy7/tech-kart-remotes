@@ -1,6 +1,6 @@
-import Dashboard from '../components/Dashboard';
-import { styled } from 'styled-components';
 import { Box, Typography } from '@mui/material';
+import { styled } from 'styled-components';
+import Dashboard from '../components/Dashboard';
 
 type Product = {
   id: string;
