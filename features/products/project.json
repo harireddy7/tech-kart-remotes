@@ -89,14 +89,7 @@
         "github": true,
         "changelog": false,
         "npm": false,
-        "tagFormat": "products-v${VERSION}",
-        "branches": [
-          "main",
-          {
-            "name": "hotfix",
-            "range": "products-v1.1.x"
-          }
-        ]
+        "tagFormat": "products-v${VERSION}"
       }
     }
   },
