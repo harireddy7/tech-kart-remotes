@@ -4,6 +4,11 @@
   "github": true,
   "repositoryUrl": "https://github.com/harireddy7/tech-kart-remotes",
   "branches": [
-    "main"
+    {
+      "name": "main"
+    },
+    {
+      "name": "hotfix"
+    }
   ]
 }

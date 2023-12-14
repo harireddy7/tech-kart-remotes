@@ -77,7 +77,7 @@
       "options": {
         "github": true,
         "changelog": false,
-        "npm": false,
+        "npm": true,
         "tagFormat": "products-v${VERSION}"
       }
     }

@@ -19,7 +19,7 @@ const App = () => {
 
   return (
     <Box className='App' p={2}>
-      <Box px={2} py={2} bgcolor='#eff6ff' mx='auto'>
+      <Box px={2} py={1} bgcolor='#beffd3' mx='auto'>
         <Heading variant='h4'>Products</Heading>
       </Box>
       <Dashboard />

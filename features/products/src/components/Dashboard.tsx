@@ -32,16 +32,18 @@ const Dashboard = () => {
         <Grid container spacing={2}>
           {products.map((product: Product) => (
             <Grid item key={product.id}>
-              <Card sx={{ width: 250, padding: 4 }}>
+              <Card sx={{ width: 300, padding: 4 }}>
                 <CardContent>
-                  <Typography variant='h6' sx={{ fontWeight: 'bold' }}>{product.name}</Typography>
-                  <Typography variant='subtitle2' color='GrayText' sx={{ fontStyle: 'italic' }}>{product.type}</Typography>
+                  <Typography variant='h6'>{product.name}</Typography>
+                  <Typography variant='body2'>{product.type}</Typography>
                 </CardContent>
                 <CardActions>
                   <Button
                     size='small'
                     onClick={() => handleAddProduct(product)}
                     variant='contained'
+                    color='success'
+                    sx={{ width: '100%' }}
                   >
                     {cart.find((p: Product) => p.id === product.id) ? 'Remove' : 'Add to cart'}
                   </Button>

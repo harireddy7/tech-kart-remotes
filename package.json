@@ -2,6 +2,7 @@
   "name": "@ext-tech-kart/source",
   "version": "0.0.0",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "start:affected": "nx affected -t serve",
     "start:products": "nx serve products",
@@ -16,7 +17,6 @@
     "affected": "nx show projects --affected",
     "prepare": "husky install"
   },
-  "private": true,
   "dependencies": {
     "@mui/material": "^5.15.0",
     "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest",
