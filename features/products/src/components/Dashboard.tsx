@@ -34,8 +34,12 @@ const Dashboard = () => {
             <Grid item key={product.id}>
               <Card sx={{ width: 320, padding: 4 }}>
                 <CardContent>
-                  <Typography variant='h6' sx={{ fontWeight: 'bold' }}>{product.name}</Typography>
-                  <Typography variant='subtitle2' color='GrayText' sx={{ fontStyle: 'italic' }}>{product.type}</Typography>
+                  <Typography variant='h6' sx={{ fontWeight: 'bold' }}>
+                    {product.name}
+                  </Typography>
+                  <Typography variant='subtitle2' color='GrayText' sx={{ fontStyle: 'italic' }}>
+                    {product.type}
+                  </Typography>
                 </CardContent>
                 <CardActions>
                   <Button
