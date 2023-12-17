@@ -107,7 +107,14 @@
         "github": true,
         "changelog": false,
         "npm": true,
-        "tagFormat": "cart-v${VERSION}"
+        "tagFormat": "cart-v${VERSION}",
+        "branches": [
+          "main",
+          {
+            "name": "hotfix-cart",
+            "range": "1.0.x"
+          }
+        ]
       }
     }
   },
