@@ -40,6 +40,7 @@
     "@nx/jest": "17.2.3",
     "@nx/js": "17.2.3",
     "@nx/react": "^17.2.3",
+    "@nx/web": "17.2.3",
     "@nx/webpack": "17.2.3",
     "@nx/workspace": "17.2.3",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
