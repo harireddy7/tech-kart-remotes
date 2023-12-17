@@ -5,6 +5,9 @@
   "repositoryUrl": "https://github.com/harireddy7/tech-kart-remotes",
   "branches": [
     "main",
-    "hotfix-products"
+    {
+      "name": "hotfix-products",
+      "range": "1.1.x"
+    }
   ]
 }

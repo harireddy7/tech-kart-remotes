@@ -78,7 +78,15 @@
         "github": true,
         "changelog": false,
         "npm": false,
-        "tagFormat": "products-v${VERSION}"
+        "tagFormat": "products-v${VERSION}",
+        "plugins": [
+          [
+            "@semantic-release/exec",
+            {
+              "verifyRelease": "chmod +x ./update-version.sh && ./update-version.sh ${nextRelease.version}"
+            }
+          ]
+        ]
       }
     }
   },
