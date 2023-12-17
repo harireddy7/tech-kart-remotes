@@ -32,7 +32,7 @@ export default App;
 const PRODUCTS: Product[] = [
   {
     id: '1701970697485',
-    name: 'Iphone 15',
+    name: 'Iphone 15 pro',
     type: 'mobile',
   },
   {
