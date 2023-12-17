@@ -8,7 +8,10 @@
       "name": "main"
     },
     {
-      "name": "hotfix"
+      "name": "hotfix-products"
+    },
+    {
+      "name": "hotfix-cart"
     }
   ]
 }

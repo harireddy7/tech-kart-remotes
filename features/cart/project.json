@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@nx/webpack:webpack",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
@@ -15,8 +17,13 @@
         "baseHref": "/",
         "main": "features/cart/src/main.ts",
         "tsConfig": "features/cart/tsconfig.app.json",
-        "assets": ["features/cart/src/favicon.ico", "features/cart/src/assets"],
-        "styles": ["features/cart/src/styles.css"],
+        "assets": [
+          "features/cart/src/favicon.ico",
+          "features/cart/src/assets"
+        ],
+        "styles": [
+          "features/cart/src/styles.css"
+        ],
         "scripts": [],
         "webpackConfig": "features/cart/webpack.config.ts"
       },
@@ -64,11 +71,15 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "features/cart/jest.config.ts"
       }
@@ -88,6 +99,15 @@
         "production": {
           "buildTarget": "cart:build:production"
         }
+      }
+    },
+    "semantic-release": {
+      "executor": "@theunderscorer/nx-semantic-release:semantic-release",
+      "options": {
+        "github": true,
+        "changelog": false,
+        "npm": true,
+        "tagFormat": "cart-v${VERSION}"
       }
     }
   },
