@@ -9,8 +9,7 @@ on:
   push:
     branches:
       - main
-      - hotfix-products
-      - hotfix-cart
+      - hotfix-*
 
 jobs:
   release:
@@ -36,7 +35,10 @@ jobs:
       - name: Get Base and Head SHA's for `nx affected`
         uses: nrwl/nx-set-shas@v4
 
-      - name: Run unit tests
+      - name: Lint and Pretty
+        run: yarn lint && yarn pretty
+
+      - name: Unit tests
         run: yarn test --base=$NX_BASE --head=$NX_HEAD
 
       - name: Build
@@ -46,4 +48,5 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           HUSKY: 0
-        run: npx nx run-many -t semantic-release --parallel=false --base=$NX_BASE --head=$NX_HEAD
+        # run: npx nx run-many -t semantic-release --parallel=false --base=$NX_BASE --head=$NX_HEAD
+        run: npx nx affected -t semantic-release --parallel=false --base=$NX_BASE --head=$NX_HEAD

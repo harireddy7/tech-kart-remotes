@@ -4,6 +4,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "start": "nx run-many -t serve",
     "start:affected": "nx affected -t serve",
     "start:products": "nx serve products",
     "build": "nx affected -t build",
