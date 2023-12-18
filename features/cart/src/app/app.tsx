@@ -1,4 +1,5 @@
-import { Box, Typography, Grid, Skeleton } from '@mui/material';
+import { Box, Typography, Grid, Skeleton, Paper } from '@mui/material';
+import { Tag } from '@ext-tech-kart/pub-ui';
 
 export function App() {
   return (
@@ -6,17 +7,25 @@ export function App() {
       <Typography variant='h4' p={2} sx={{ background: '#cceeff', textAlign: 'center' }}>
         Cart
       </Typography>
-      <Grid container columns={{ xs: 3, sm: 4, md: 5 }}>
+      <Grid container columns={{ xs: 3, sm: 4, md: 5 }} spacing={1} mt={1}>
         {Array(5)
           .fill(1)
           .map((_, index) => (
             <Grid item p={2} key={index} sx={{ minWidth: 300 }}>
-              <Skeleton animation='wave' variant='rectangular' height={118} />
-              <Box sx={{ pt: 0.5 }}>
-                <Skeleton animation='wave' />
-                <Skeleton animation='wave' />
-                <Skeleton animation='wave' sx={{ height: '3rem' }} />
-              </Box>
+              <Paper sx={{ padding: 2 }}>
+                <Skeleton
+                  animation='wave'
+                  variant='rectangular'
+                  height={118}
+                  sx={{ marginBottom: 1 }}
+                />
+                <Tag title={`card${index + 1}`} />
+                <Box sx={{ pt: 0.5 }}>
+                  <Skeleton animation='wave' />
+                  <Skeleton animation='wave' />
+                  <Skeleton animation='wave' sx={{ height: '3rem' }} />
+                </Box>
+              </Paper>
             </Grid>
           ))}
       </Grid>

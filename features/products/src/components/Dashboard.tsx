@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Box, Grid } from '@mui/material';
 import { Card } from '@ext-tech-kart/ui';
+import { Tag } from '@ext-tech-kart/pub-ui';
 
 type Product = {
   id: string;
@@ -32,16 +33,21 @@ const Dashboard = () => {
         <Grid container spacing={2}>
           {products.map((product: Product) => (
             <Grid item key={product.id}>
-              <Card
-                title={product.name}
-                description={product.type}
-                buttons={[
-                  {
-                    text: cart.find((p: Product) => p.id === product.id) ? 'Remove' : 'Add to cart',
-                    onClick: () => handleAddProduct(product),
-                  },
-                ]}
-              />
+              <Box>
+                <Tag title={product.name} />
+                <Card
+                  title={product.name}
+                  description={product.type}
+                  buttons={[
+                    {
+                      text: cart.find((p: Product) => p.id === product.id)
+                        ? 'Remove'
+                        : 'Add to cart',
+                      onClick: () => handleAddProduct(product),
+                    },
+                  ]}
+                />
+              </Box>
             </Grid>
           ))}
         </Grid>

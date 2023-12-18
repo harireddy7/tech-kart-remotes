@@ -1,1 +1,1 @@
-export * from './lib/pub-ui';
+export * from './lib/tag';
