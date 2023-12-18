@@ -36,7 +36,7 @@ jobs:
         uses: nrwl/nx-set-shas@v4
 
       - name: Lint and Pretty
-        run: yarn lint && yarn pretty
+        run: yarn lint --base=$NX_BASE --head=$NX_HEAD && yarn pretty --base=$NX_BASE --head=$NX_HEAD
 
       - name: Unit tests
         run: yarn test --base=$NX_BASE --head=$NX_HEAD
