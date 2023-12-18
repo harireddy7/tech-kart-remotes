@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Box, Button, Card, CardActions, CardContent, Grid, Typography } from '@mui/material';
-// import { Card } from '@tech-kart-nx/ui';
+import { Box, Grid } from '@mui/material';
+import { Card } from '@ext-tech-kart/ui';
 
 type Product = {
   id: string;
@@ -32,23 +32,16 @@ const Dashboard = () => {
         <Grid container spacing={2}>
           {products.map((product: Product) => (
             <Grid item key={product.id}>
-              <Card sx={{ width: 300, padding: 4 }}>
-                <CardContent>
-                  <Typography variant='h6'>{product.name}</Typography>
-                  <Typography variant='body2'>{product.type}</Typography>
-                </CardContent>
-                <CardActions>
-                  <Button
-                    size='small'
-                    onClick={() => handleAddProduct(product)}
-                    variant='contained'
-                    color='success'
-                    sx={{ width: '100%' }}
-                  >
-                    {cart.find((p: Product) => p.id === product.id) ? 'Remove' : 'Add to cart'}
-                  </Button>
-                </CardActions>
-              </Card>
+              <Card
+                title={product.name}
+                description={product.type}
+                buttons={[
+                  {
+                    text: cart.find((p: Product) => p.id === product.id) ? 'Remove' : 'Add to cart',
+                    onClick: () => handleAddProduct(product),
+                  },
+                ]}
+              />
             </Grid>
           ))}
         </Grid>

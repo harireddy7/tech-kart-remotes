@@ -25,6 +25,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "paths": {
+      "@ext-tech-kart/ui": ["libs/ui/src/index.ts"],
       "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"],
       "cart/Module": ["features/cart/src/remote-entry.ts"]
     }
