@@ -1,5 +1,5 @@
 import { Box, Typography, Grid, Skeleton, Paper } from '@mui/material';
-import { Tag } from '@ext-tech-kart/pub-ui';
+import { TagSkeleton } from '@ext-tech-kart/pub-ui';
 
 export function App() {
   return (
@@ -19,7 +19,7 @@ export function App() {
                   height={118}
                   sx={{ marginBottom: 1 }}
                 />
-                <Tag title={`card${index + 1}`} />
+                <TagSkeleton animation='wave' />
                 <Box sx={{ pt: 0.5 }}>
                   <Skeleton animation='wave' />
                   <Skeleton animation='wave' />
