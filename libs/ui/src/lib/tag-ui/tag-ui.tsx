@@ -7,4 +7,3 @@ type Props = {
 export const TagUI = ({ title }: Props) => {
   return <Chip label={title} variant='outlined' size='small' />;
 };
-

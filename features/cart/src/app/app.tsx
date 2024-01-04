@@ -1,6 +1,6 @@
 import { Box, Typography, Grid, Skeleton, Paper } from '@mui/material';
 import { TagSkeleton } from '@ext-tech-kart/pub-ui';
-import { TagUI } from '@ext-tech-kart/ui'
+import { TagUI } from '@ext-tech-kart/ui';
 
 export function App() {
   return (
@@ -21,7 +21,7 @@ export function App() {
                   sx={{ marginBottom: 1 }}
                 />
                 <TagSkeleton animation='wave' />
-                <TagUI title="cart" />
+                <TagUI title='cart' />
                 <Box sx={{ pt: 0.5 }}>
                   <Skeleton animation='wave' />
                   <Skeleton animation='wave' />
