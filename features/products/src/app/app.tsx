@@ -12,7 +12,7 @@ const App = () => {
   return (
     <Box className='App' p={2}>
       <Box px={2} py={1} bgcolor='#beffd3' mx='auto'>
-        <Heading variant='h4'>Products</Heading>
+        <Heading variant='h4'>PRODUCTS</Heading>
       </Box>
       <Dashboard />
     </Box>
