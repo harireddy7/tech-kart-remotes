@@ -1,6 +1,6 @@
-import { CardUI } from '@ext-tech-kart/ui';
 import { Box, Typography } from '@mui/material';
 import styled from 'styled-components';
+import { CardUI } from '@ext-tech-kart/ui/card';
 
 const Wrapper = styled(Box)`
   border: 1px solid #ccc;

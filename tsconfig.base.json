@@ -26,7 +26,8 @@
     "jsx": "react-jsx",
     "paths": {
       "@ext-tech-kart/pub-ui": ["libs/pub-ui/src/index.ts"],
-      "@ext-tech-kart/ui": ["libs/ui/src/index.ts"],
+      "@ext-tech-kart/ui/card": ["libs/ui/src/lib/card/card.tsx"],
+      "@ext-tech-kart/ui/tag": ["libs/ui/src/lib/tag/tag.tsx"],
       "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"],
       "cart/Module": ["features/cart/src/remote-entry.ts"]
     }

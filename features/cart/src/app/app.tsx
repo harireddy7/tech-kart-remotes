@@ -1,6 +1,6 @@
-import { TagUI } from '@ext-tech-kart/ui';
 import { Box, Typography } from '@mui/material';
 import { styled } from 'styled-components';
+import { TagUI } from '@ext-tech-kart/ui/tag';
 
 const Heading = styled(Typography)`
   font-weight: bold;
