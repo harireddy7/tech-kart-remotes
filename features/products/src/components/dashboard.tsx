@@ -1,4 +1,5 @@
-import { Box } from '@mui/material';
+import { CardUI } from '@ext-tech-kart/ui';
+import { Box, Typography } from '@mui/material';
 import styled from 'styled-components';
 
 const Wrapper = styled(Box)`
@@ -10,15 +11,8 @@ const Dashboard = () => {
     <Box p={2}>
       <Box p={2} mx='auto'>
         <Wrapper p={3} m={3}>
-          <header>CardUI</header>
-        </Wrapper>
-
-        <Wrapper p={3} m={3}>
-          <header>TextUI</header>
-        </Wrapper>
-
-        <Wrapper p={3} m={3}>
-          <header>ButtonUI</header>
+          <Typography variant='h4'>CardUI</Typography>
+          <CardUI title='products' />
         </Wrapper>
       </Box>
     </Box>

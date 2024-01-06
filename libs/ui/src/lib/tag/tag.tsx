@@ -1,13 +1,13 @@
 import Typography from '@mui/material/Typography';
 
-interface CardProps {
+interface TagProps {
   title: string;
 }
 
-export const CardUI = ({ title }: CardProps) => {
+export const TagUI = ({ title }: TagProps) => {
   return (
     <Typography color='red' py={1} variant='h6' component='div'>
-      Card From {title}
+      Tag From {title}
     </Typography>
   );
 };
