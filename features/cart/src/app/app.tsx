@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import { styled } from 'styled-components';
+import { Tag } from '@ext-tech-kart/ui/tag';
 
 const Heading = styled(Typography)`
   font-weight: bold;
@@ -21,7 +22,7 @@ const App = () => {
         <Box p={2} mx='auto'>
           <Wrapper p={3} m={3}>
             <Typography variant='h4'>TagUI</Typography>
-            {/* <TagUI title='cart' /> */}
+            <Tag title='cart' />
           </Wrapper>
         </Box>
       </Box>
