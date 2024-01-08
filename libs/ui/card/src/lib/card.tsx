@@ -7,7 +7,7 @@ export interface CardProps {
 
 export function Card({ title }: CardProps) {
   return (
-    <Typography variant='h5' color='green' pt={2}>
+    <Typography variant='h5' color='blue' pt={2}>
       👉 Card.tsx from {title}
     </Typography>
   );
