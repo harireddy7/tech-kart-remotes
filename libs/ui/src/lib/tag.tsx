@@ -8,7 +8,7 @@ export interface TagProps {
 export function Tag({ title }: TagProps) {
   return (
     <Typography variant='h5' color='red' pt={2}>
-      👉 Tag.tsx from {title}
+      👉 Tag.tsx from {title} [updated]
     </Typography>
   );
 }
