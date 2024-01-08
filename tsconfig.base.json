@@ -25,9 +25,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "paths": {
-      "@ext-tech-kart/modal": ["libs/ui/modal/src/index.ts"],
-      "@ext-tech-kart/ui/card": ["libs/ui/card/src/index.ts"],
-      "@ext-tech-kart/ui/tag": ["libs/ui/tag/src/index.ts"],
       "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"],
       "cart/Module": ["features/cart/src/remote-entry.ts"]
     }
