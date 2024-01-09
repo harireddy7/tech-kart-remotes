@@ -1,9 +1,8 @@
 import './tag.css';
 
-/* eslint-disable-next-line */
-export interface TagProps {}
+interface Props {}
 
-export function Tag(props: TagProps) {
+export function Tag(props: Props) {
   return (
     <div>
       <h1>Welcome to Tag!</h1>
