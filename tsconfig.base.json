@@ -27,6 +27,8 @@
     "paths": {
       "@ext-tech-kart/utils": ["libs/utils/src/index.ts"],
       "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"],
+      "@ui/card": ["libs/ui/card/src/index.ts"],
+      "@ui/tag": ["libs/ui/tag/src/index.ts"],
       "cart/Module": ["features/cart/src/remote-entry.ts"]
     }
   },
