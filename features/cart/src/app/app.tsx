@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-// import { Tag } from '@ui/tag';
+import { Tag } from '@ui/tag';
 import { styled } from 'styled-components';
 
 const Heading = styled(Typography)`
@@ -22,6 +22,7 @@ const App = () => {
         <Box p={2} mx='auto'>
           <Wrapper p={3} m={3}>
             <Typography variant='h4'>TagUI</Typography>
+            <Tag />
           </Wrapper>
         </Box>
       </Box>
