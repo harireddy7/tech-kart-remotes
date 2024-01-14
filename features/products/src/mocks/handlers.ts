@@ -9,7 +9,7 @@ export const handlers = [
       ctx.status(200),
       ctx.json([{ name: 'barry' }, { name: 'oliver' }]),
       ctx.set({
-        'Access-Control-Allow-Origin': 'localhost'
+        'Access-Control-Allow-Origin': 'localhost',
       })
     );
   }),
