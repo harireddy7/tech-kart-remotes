@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title"
+    },
+    {
+      "id": "2",
+      "title": "another title"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "mobile phone"
+    },
+    {
+      "id": "2",
+      "name": "laptop"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
