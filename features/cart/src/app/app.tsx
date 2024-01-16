@@ -1,4 +1,4 @@
-import { getApiResponse } from '@ext-tech-kart/utils';
+// import { getApiResponse } from '@ext-tech-kart/utils';
 import { Box, Typography } from '@mui/material';
 import { Tag } from '@ui/tag';
 import { styled } from 'styled-components';
@@ -24,7 +24,7 @@ const App = () => {
           <Wrapper p={3} m={3}>
             <Typography variant='h4'>TagUI</Typography>
             <Tag />
-            <pre>Api Respose: {JSON.stringify(getApiResponse('cart'))}</pre>
+            {/* <pre>Api Respose: {JSON.stringify(getApiResponse('cart'))}</pre> */}
           </Wrapper>
         </Box>
       </Box>
