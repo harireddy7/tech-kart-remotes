@@ -32,21 +32,18 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Get Base and Head SHA's for `nx affected`
-        uses: nrwl/nx-set-shas@v4
-
       - name: Lint and Pretty
-        run: yarn lint --base=$NX_BASE --head=$NX_HEAD && yarn pretty --base=$NX_BASE --head=$NX_HEAD
+        run: yarn lint && yarn pretty
 
       - name: Unit tests
-        run: yarn test --base=$NX_BASE --head=$NX_HEAD
+        run: yarn test
 
       - name: Build
-        run: yarn build --base=$NX_BASE --head=$NX_HEAD
+        run: yarn build
 
       - name: Release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           HUSKY: 0
-        # run: npx nx run-many -t semantic-release --parallel=false --base=$NX_BASE --head=$NX_HEAD
-        run: npx nx affected -t semantic-release --parallel=false --base=$NX_BASE --head=$NX_HEAD
+        # run: npx nx run-many -t semantic-release --parallel=false
+        run: npx nx affected -t semantic-release --parallel=false

@@ -5,7 +5,7 @@ interface Props {}
 export function Tag(props: Props) {
   return (
     <div>
-      <h1>Welcome to Tag!</h1>
+      <h1>Welcome to Tag!!</h1>
     </div>
   );
 }
