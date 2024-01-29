@@ -24,6 +24,7 @@ const App = () => {
           <Wrapper p={3} m={3}>
             <Typography variant='h4'>TagUI</Typography>
             <Tag />
+            <p>A simple description text</p>
             {/* <pre>Api Respose: {JSON.stringify(getApiResponse('cart'))}</pre> */}
           </Wrapper>
         </Box>
