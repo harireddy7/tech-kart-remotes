@@ -33,7 +33,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Lint and Pretty
-        yarn lint --base=$NX_BASE --head=$NX_HEAD && yarn pretty --base=$NX_BASE --head=$NX_HEAD
+        run: yarn lint --base=$NX_BASE --head=$NX_HEAD && yarn pretty --base=$NX_BASE --head=$NX_HEAD
 
       - name: Unit tests
         run: yarn test --base=$NX_BASE --head=$NX_HEAD
