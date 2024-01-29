@@ -17,14 +17,14 @@ const App = () => {
   return (
     <Box className='App' p={2}>
       <Box px={2} py={1} bgcolor='#beffd3' mx='auto'>
-        <Heading variant='h4'>CART</Heading>
+        <Heading variant='h4'>Cart</Heading>
       </Box>
       <Box p={2}>
         <Box p={2} mx='auto'>
           <Wrapper p={3} m={3}>
             <Typography variant='h4'>TagUI</Typography>
             <Tag />
-            <p>A simple description text!!!</p>
+            <p>A simple description text</p>
           </Wrapper>
         </Box>
       </Box>
