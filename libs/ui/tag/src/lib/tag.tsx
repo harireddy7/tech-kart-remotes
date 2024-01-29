@@ -1,11 +1,9 @@
 import './tag.css';
 
-interface Props {}
-
-export function Tag(props: Props) {
+export function Tag() {
   return (
     <div>
-      <h1>Welcome to Tag[BEFORE-PR-MERGE]</h1>
+      <h1>Tag component</h1>
     </div>
   );
 }
