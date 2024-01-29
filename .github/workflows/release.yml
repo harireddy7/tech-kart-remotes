@@ -33,24 +33,23 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Lint and Pretty
-        run: yarn lint && yarn pretty
+        yarn lint --base=$NX_BASE --head=$NX_HEAD && yarn pretty --base=$NX_BASE --head=$NX_HEAD
 
       - name: Unit tests
-        run: yarn test
+        run: yarn test --base=$NX_BASE --head=$NX_HEAD
 
       - name: Log
         run: |
           echo $GITHUB_SHA
           echo $(git rev-parse --short "$GITHUB_SHA")
-          echo "sha_short=$(git rev-parse --short "$GITHUB_SHA")" >> "$GITHUB_ENV"
           echo ${GITHUB_REF#refs/heads/}
 
       - name: Build
-        run: yarn build
+        run: yarn build --base=$NX_BASE --head=$NX_HEAD
 
       - name: Release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           HUSKY: 0
         # run: npx nx run-many -t semantic-release --parallel=false
-        run: npx nx affected -t semantic-release --parallel=false
+        run: npx nx affected -t semantic-release --parallel=false --base=$NX_BASE --head=$NX_HEAD
