@@ -24,7 +24,7 @@ const App = () => {
           <Wrapper p={3} m={3}>
             <Typography variant='h4'>TagUI</Typography>
             <Tag />
-            <p>A simple description text</p>
+            <p>A simple description text [test empty base arg to affected]</p>
           </Wrapper>
         </Box>
       </Box>
