@@ -35,6 +35,10 @@ jobs:
       - name: Get Base and Head SHA's for `nx affected`
         uses: nrwl/nx-set-shas@v4
 
+      - name: Reset NX_BASE to empty
+        run: |
+          echo "NX_BASE=''" >> $GITHUB_ENV
+
       - name: Lint and Pretty
         run: yarn lint --base=$NX_BASE --head=$NX_HEAD && yarn pretty --base=$NX_BASE --head=$NX_HEAD
 
