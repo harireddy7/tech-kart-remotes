@@ -10,7 +10,9 @@ export function Card({ title, description }: Props) {
   return (
     <div>
       <Typography variant='h4'>{title}</Typography>
-      <Typography variant='body1' color='GrayText'>{description}</Typography>
+      <Typography variant='body1' color='GrayText'>
+        {description}
+      </Typography>
     </div>
   );
 }
