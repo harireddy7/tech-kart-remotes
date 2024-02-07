@@ -19,7 +19,7 @@ const Dashboard = () => {
           <Typography variant='h4'>CardUI</Typography>
           <Card />
           {/* <p>Unique ID: {getUniqueId()}</p> */}
-          <p>{JSON.stringify(feature)}</p>
+          {/* <p>{JSON.stringify(feature)}</p> */}
         </Wrapper>
       </Box>
     </Box>
