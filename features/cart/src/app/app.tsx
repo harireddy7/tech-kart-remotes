@@ -22,7 +22,7 @@ const App = () => {
       <Box p={2}>
         <Box p={2} mx='auto'>
           <Wrapper p={3} m={3}>
-            <Typography variant='h4'>TagUI</Typography>
+            <Typography variant='h4'>Tag UI</Typography>
             <Tag />
           </Wrapper>
         </Box>
