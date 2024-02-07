@@ -1,11 +1,15 @@
 import { Chip } from '@mui/material';
 import './tag.css';
 
-export function Tag() {
+interface Props {
+  label: string;
+  variant: 'filled' | 'outlined';
+}
+
+export function Tag({ label, variant }: Props) {
   return (
     <>
-      <Chip label='Chip Filled' />
-      <Chip label='Chip Outlined' variant='outlined' />
+      <Chip label={label} variant={variant} />
     </>
   );
 }
