@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Card } from '@ui/card';
 
 const Wrapper = styled(Box)`
-  border: 1px solid #ccc;
+  border: 1px solid #a6a5e4;
 `;
 
 const Dashboard = () => {
@@ -13,7 +13,7 @@ const Dashboard = () => {
         p={2}
         mx='auto'
         display='grid'
-        gridTemplateColumns='repeat(auto-fill, minmax(400px, 1fr))'
+        gridTemplateColumns='repeat(auto-fill, minmax(320px, 1fr))'
       >
         {PRODUCTS.map((product) => (
           <Wrapper p={3} m={3} maxWidth='300px' key={product.title}>
