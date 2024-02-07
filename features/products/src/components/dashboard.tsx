@@ -13,7 +13,7 @@ const Dashboard = () => {
         p={2}
         mx='auto'
         display='grid'
-        gridTemplateColumns='repeat(auto-fill, minmax(400px, 1fr))'
+        gridTemplateColumns='repeat(auto-fill, minmax(350px, 1fr))'
       >
         {PRODUCTS.map((product) => (
           <Wrapper p={3} m={3} maxWidth='300px' key={product.title}>
