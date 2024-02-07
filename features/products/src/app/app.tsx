@@ -11,7 +11,7 @@ const Heading = styled(Typography)`
 const App = () => {
   return (
     <Box className='App' p={2}>
-      <Box px={2} py={1} bgcolor='#beffd3' mx='auto'>
+      <Box px={2} py={2} bgcolor='#befff9' mx='auto'>
         <Heading variant='h4'>PRODUCTS</Heading>
       </Box>
       <Dashboard />

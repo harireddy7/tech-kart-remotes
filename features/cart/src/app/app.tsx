@@ -16,13 +16,12 @@ const Wrapper = styled(Box)`
 const App = () => {
   return (
     <Box className='App' p={2}>
-      <Box px={2} py={1} bgcolor='#beffd3' mx='auto'>
-        <Heading variant='h4'>Cart</Heading>
+      <Box px={2} py={2} bgcolor='#befff9' mx='auto'>
+        <Heading variant='h4'>CART</Heading>
       </Box>
       <Box p={2}>
         <Box p={2} mx='auto'>
           <Wrapper p={3} m={3}>
-            <Typography variant='h4'>Tag UI</Typography>
             <Tag />
           </Wrapper>
         </Box>

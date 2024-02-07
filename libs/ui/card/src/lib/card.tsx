@@ -1,10 +1,16 @@
+import { Typography } from '@mui/material';
 import './card.css';
 
-export function Card() {
+interface Props {
+  title: string;
+  description?: string;
+}
+
+export function Card({ title, description }: Props) {
   return (
     <div>
-      <h1>Welcome to Card!</h1>
-      <p>A simple description text</p>
+      <Typography variant='h4'>{title}</Typography>
+      <Typography variant='body1' color='GrayText'>{description}</Typography>
     </div>
   );
 }

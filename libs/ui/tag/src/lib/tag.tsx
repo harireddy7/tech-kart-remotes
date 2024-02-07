@@ -1,11 +1,12 @@
+import { Chip, Typography } from '@mui/material';
 import './tag.css';
 
 export function Tag() {
   return (
-    <div>
-      <h1>Tag</h1>
-      <p>A simple description text</p>
-    </div>
+    <>
+      <Chip label="Chip Filled" />
+      <Chip label="Chip Outlined" variant="outlined" />
+    </>
   );
 }
 
