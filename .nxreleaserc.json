@@ -8,6 +8,10 @@
       "name": "main"
     },
     {
+      "name": "develop",
+      "prerelease": true
+    },
+    {
       "name": "hotfix-products"
     },
     {
