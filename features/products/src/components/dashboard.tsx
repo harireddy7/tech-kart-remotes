@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Card } from '@ui/card';
 
 const Wrapper = styled(Box)`
-  border: 1px solid #a6a5e4;
+  border: 1px solid #d44533;
 `;
 
 const Dashboard = () => {
