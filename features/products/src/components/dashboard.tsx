@@ -18,8 +18,6 @@ const Dashboard = () => {
         <Wrapper p={3} m={3}>
           <Typography variant='h4'>CardUI</Typography>
           <Card />
-          {/* <p>Unique ID: {getUniqueId()}</p> */}
-          {/* <p>{JSON.stringify(feature)}</p> */}
         </Wrapper>
       </Box>
     </Box>
