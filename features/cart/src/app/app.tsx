@@ -22,7 +22,9 @@ const App = () => {
       <Box p={2}>
         <Box p={2} mx='auto'>
           <Wrapper p={3} m={3} display='flex' gap='1rem'>
-            {TAGS.map((tag, idx) => <Tag key={tag} label={tag} variant={idx % 2 === 0 ? 'filled' : 'outlined'} />)}
+            {TAGS.map((tag, idx) => (
+              <Tag key={tag} label={tag} variant={idx % 2 === 0 ? 'filled' : 'outlined'} />
+            ))}
           </Wrapper>
         </Box>
       </Box>
@@ -32,4 +34,4 @@ const App = () => {
 
 export default App;
 
-const TAGS = ['mobile', 'watch', 'laptop']
+const TAGS = ['mobile', 'watch', 'laptop'];
