@@ -1,12 +1,10 @@
 import './card.css';
 
-/* eslint-disable-next-line */
-export interface CardProps {}
-
-export function Card(props: CardProps) {
+export function Card() {
   return (
     <div>
       <h1>Welcome to Card!</h1>
+      <p>A simple description text</p>
     </div>
   );
 }
