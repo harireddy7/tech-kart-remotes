@@ -1,7 +1,7 @@
 # test, build, generate release notes, changelog
 # bump version in package.json
 # release to GitHub
-# when a push happens to the main branch
+# when a push happens to the main/develop branch
 
 name: Release
 
@@ -9,6 +9,7 @@ on:
   push:
     branches:
       - main
+      - develop
       - hotfix-*
 
 jobs:
