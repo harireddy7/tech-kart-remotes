@@ -35,21 +35,11 @@ jobs:
       - name: Get Base and Head SHA's for `nx affected`
         uses: nrwl/nx-set-shas@v4
 
-      - name: Reset NX_BASE to empty
-        run: |
-          echo "NX_BASE=''" >> $GITHUB_ENV
-
       - name: Lint and Pretty
         run: yarn lint --base=$NX_BASE --head=$NX_HEAD && yarn pretty --base=$NX_BASE --head=$NX_HEAD
 
       - name: Unit tests
         run: yarn test --base=$NX_BASE --head=$NX_HEAD
-
-      - name: Log
-        run: |
-          echo $GITHUB_SHA
-          echo $(git rev-parse --short "$GITHUB_SHA")
-          echo ${GITHUB_REF#refs/heads/}
 
       - name: Build
         run: yarn build --base=$NX_BASE --head=$NX_HEAD
