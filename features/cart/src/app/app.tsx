@@ -21,7 +21,7 @@ const App = () => {
       </Box>
       <Box p={2}>
         <Box p={2} mx='auto'>
-          <Wrapper p={3} m={3} display='flex' gap='1rem'>
+          <Wrapper p={3} m={3} display='flex' gap='12px'>
             {TAGS.map((tag, idx) => (
               <Tag key={tag} label={tag} variant={idx % 2 === 0 ? 'filled' : 'outlined'} />
             ))}
